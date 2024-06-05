@@ -13,9 +13,9 @@ from geopy.exc import GeocoderTimedOut
 import requests
 
 # Load the trained model
-xgb_best = joblib.load('//cbar.az/dfs-r/Roam/Ilkin_Huseynov/Desktop/dasinmazemlak/models/may2024_model_compressed.pkl')
+xgb_best = joblib.load('may2024_model_compressed.pkl')
 
-data_structure = pd.read_csv('//cbar.az/dfs-r/Roam/Ilkin_Huseynov/Desktop/dasinmazemlak/models/data_format_may.csv')
+data_structure = pd.read_csv('data_format_may.csv')
 
 # Function to preprocess input data
 def preprocess_input(data):
@@ -208,7 +208,7 @@ def main():
 
     if choices == 'Visual':
         st.title("Mənzil elanları, May 2024")
-        st.components.v1.html(open('//cbar.az/dfs-r/Roam/Ilkin_Huseynov/Desktop/dasinmazemlak/models/hyperlink_error_may.html').read(), width=1000, height=1200) 
+        st.components.v1.html(open('hyperlink_error_may.html').read(), width=1000, height=1200) 
 
 if __name__ == "__main__":
     main()
