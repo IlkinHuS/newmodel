@@ -101,7 +101,7 @@ def main():
         with col1:
             ipoteka = st.selectbox("İpoteka", ['var', 'yoxdur'])
         with col2:
-            year_month = st.selectbox("Qimətləndirmə tarixi", ['2024-04', '2024-03', '2024-02', '2024-01', '2023-12', '2023-11', '2023-10'])
+            year_month = st.selectbox("Qimətləndirmə tarixi", ['2024-05','2024-04', '2024-03', '2024-02', '2024-01', '2023-12', '2023-11', '2023-10','2023-09'])
 
         # Initialize default coordinates
         latitude, longitude = None, None
