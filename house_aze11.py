@@ -84,14 +84,14 @@ def main():
         # Input fields
         col1, col2 = st.columns([1, 1])
         with col1:
-            otaq_sayi = st.number_input("Otaq sayı", min_value=1, value=4, max_value=15)
+            otaq_sayi = st.number_input("Otaq sayı", min_value=1, value=2, max_value=15)
         with col2:
-            sahe_kvm = st.number_input("Sahə (kv.m)", min_value=10, value=90, max_value=500)
+            sahe_kvm = st.number_input("Sahə (kv.m)", min_value=10, value=95, max_value=500)
         col1, col2 = st.columns([1, 1])  
         with col1:  
-            mertebe_yer = st.number_input("Mərtəbə", min_value=0, value=5, max_value=50)
+            mertebe_yer = st.number_input("Mərtəbə", min_value=0, value=10, max_value=50)
         with col2:
-            mertebe_say = st.number_input("Mərtəbə sayı", min_value=1, value=9, max_value=50)
+            mertebe_say = st.number_input("Mərtəbə sayı", min_value=1, value=20, max_value=50)
         col1, col2 = st.columns([1, 1])  
         with col1:
             kateqoriya = st.selectbox("Kateqoriya", ['Yeni tikili', 'Köhnə tikili'])
@@ -107,7 +107,7 @@ def main():
         latitude, longitude = None, None
 
         # Address input or map selection
-        location_method = st.radio("Select location method", ["Enter address", "Select on map"])
+        location_method = st.radio("Select location method", ["Select on map","Enter address"])
 
         if location_method == "Enter address":
             address = st.text_input("Enter the address")
@@ -141,7 +141,7 @@ def main():
                                 st.success(f"Predicted house price: {predicted_price:.2f} AZN")
         else:
             st.write("Select the location on the map:")
-            default_location = [40.400222, 49.7956866]
+            default_location = [40.3874646, 49.8030282]
 
             # Initialize folium map
             m = folium.Map(location=default_location, zoom_start=12)
