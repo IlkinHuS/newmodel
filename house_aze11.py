@@ -141,7 +141,7 @@ def main():
                                 st.success(f"Predicted house price: {predicted_price:.2f} AZN")
         else:
             st.write("Select the location on the map:")
-            default_location = [40.3871998, ,49.8029927]
+            default_location = [40.3871998 ,49.8029927]
 
             # Initialize folium map
             m = folium.Map(location=default_location, zoom_start=12)
